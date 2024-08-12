@@ -1,6 +1,8 @@
 import React from "react";
 import "./Course.css"; // Import the CSS file for styling
 import { Link } from "react-router-dom"; // Import Link for navigation
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 import a from "../assets/1.jpg";
 import b from "../assets/2.jpg";
 import c from "../assets/3.jpg";
@@ -128,26 +130,30 @@ const books = [
 
 const Course = () => {
   return (
-    <div className="course-container">
-      <h1>Available Books</h1>
-      <div className="book-list">
-        {books.map((book) => (
-          <div key={book.id} className="book-card">
-            <img src={book.image} alt={book.title} className="book-image" />
-            <h2>{book.title}</h2>
-            <p className="author">by {book.author}</p>
-            <p className="price">{book.price}</p>
-            <button className="buy-button">
-              <Link
-                to="/payment"
-                style={{ color: "white", textDecoration: "none" }}
-              >
-                Buy
-              </Link>
-            </button>
-          </div>
-        ))}
+    <div>
+      <Navbar />
+      <div className="course-container">
+        <h1>Available Books</h1>
+        <div className="book-list">
+          {books.map((book) => (
+            <div key={book.id} className="book-card">
+              <img src={book.image} alt={book.title} className="book-image" />
+              <h2>{book.title}</h2>
+              <p className="author">by {book.author}</p>
+              <p className="price">{book.price}</p>
+              <button className="buy-button">
+                <Link
+                  to="/payment"
+                  style={{ color: "white", textDecoration: "none" }}
+                >
+                  Buy
+                </Link>
+              </button>
+            </div>
+          ))}
+        </div>
       </div>
+      <Footer />
     </div>
   );
 };

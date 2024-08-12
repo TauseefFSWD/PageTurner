@@ -2,6 +2,7 @@ import React from "react";
 import Home from "./home/Home";
 import { Navigate, Route, Routes } from "react-router-dom";
 import Courses from "./courses/Courses";
+import Course from "./components/Course";
 import Signup from "./components/Signup";
 import { Toaster } from "react-hot-toast";
 import { useAuth } from "./context/AuthProvider";
@@ -17,7 +18,7 @@ function App() {
       <div className="dark:bg-slate-900 dark:text-white">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Courses" element={<Courses />} />
+          <Route path="/Course" element={<Course />} />
           <Route path="/About" element={<About />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/payment" element={<PaymentPage />} />
