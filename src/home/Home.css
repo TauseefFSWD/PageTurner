@@ -1,0 +1,183 @@
+.home-container {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    padding-top: 100px; 
+  }
+  
+  .hero-section {
+    background: url('../assets/hero-background.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  .hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-out;
+  }
+  
+  .hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    animation: fadeIn 1.5s ease-out;
+  }
+  
+  .hero-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    animation: fadeIn 2s ease-out;
+  }
+  
+  .hero-button:hover {
+    background-color: #0056b3;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .featured-books, .new-collections, .fun-stuff {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .featured-books h2, .new-collections h2, .fun-stuff h2 {
+    color: #007bff;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+  }
+  
+  .books-container, .collections-container, .fun-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .book-card, .collection-card, .fun-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .book-card:hover, .collection-card:hover, .fun-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .book-cover {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: opacity 0.3s ease;
+  }
+  
+  .book-cover:hover {
+    opacity: 0.8;
+  }
+  
+  .book-info {
+    margin-top: 10px;
+  }
+  
+  .book-info h3 {
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  .book-info p {
+    font-size: 1em;
+    color: #666;
+    margin: 10px 0;
+  }
+  
+  .book-price {
+    font-size: 1.2em;
+    color: #007bff;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .book-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .book-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .collection-icon, .fun-item h3 {
+    font-size: 2.5em;
+    color: #007bff;
+    margin-bottom: 15px;
+  }
+  
+  .collection-card p, .fun-item p {
+    font-size: 1em;
+    color: #666;
+  }
+  
+  .fun-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .fun-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .books-container, .collections-container, .fun-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
