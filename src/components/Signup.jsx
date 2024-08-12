@@ -24,7 +24,7 @@ function Signup() {
       password: data.password,
     };
     await axios
-      .post("https://bookback-qxh8.onrender.com//user/signup", userInfo)
+      .post("https://bookback-qxh8.onrender.com/user/signup", userInfo)
       .then((res) => {
         console.log(res.data);
         if (res.data) {
